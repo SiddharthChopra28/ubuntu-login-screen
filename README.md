@@ -2,10 +2,17 @@
 ## program for randomizing login screen background everytime you login
 ### fork from [PRATAP-KUMAR/ubuntu-gdm-set-background](https://github.com/PRATAP-KUMAR/ubuntu-gdm-set-background)
 
-To run the program, download the files and run as:
-```python3 ubuntu-login-screen.py <client_id> <client_secret> <redirect_uri>```
- If the execution is successfull, the program will be added to startup and keys will be cached locally.
+### To get keys 
  
- ## To get keys 
+ Create/login to your account from the unsplash website.
+ From the [applications page](https://unsplash.com/oauth/applications), create a new app.
+ Navigate to keys section to get access key and secret key. Get the redirect uri from Redirect URI and permissions section.
+
+ Allow all the permissions for the app (for the python-unsplash library to work, even though only public photos will be accessed.)
+
+
+### To run the program, download the files and run as:
+```python3 ubuntu-login-screen.py <access key> <secret key> <redirect_uri>```
+ If the execution is successful, the program will be added to startup and keys will be cached locally.
  
- Create an account on the unsplash website
+ Enjoy!
