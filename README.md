@@ -1,6 +1,6 @@
 # ubuntu-login-screen
 ## program for randomizing login screen background everytime you login
-### fork from [PRATAP-KUMAR/ubuntu-gdm-set-background](https://github.com/PRATAP-KUMAR/ubuntu-gdm-set-background)
+### script ubuntu_gdm_set_background.sh from [PRATAP-KUMAR/ubuntu-gdm-set-background](https://github.com/PRATAP-KUMAR/ubuntu-gdm-set-background)
 
 ### To get keys 
  
