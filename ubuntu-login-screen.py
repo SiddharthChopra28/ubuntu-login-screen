@@ -7,9 +7,6 @@ from unsplash.auth import Auth
 from urllib import request
 
 
-with open('ubuntu_gdm_set_background.sh', 'r') as script:
-    ubuntu_gdm_set_background = script.read()
-
 
 def add_to_autostart():
     
@@ -57,7 +54,16 @@ def set_login_screen_bg():
 
 
 def main(client_id, client_secret, redirect_uri):
+    global ubuntu_gdm_set_background
     
+    try:
+        with open('ubuntu_gdm_set_background.sh', 'r') as script:
+            ubuntu_gdm_set_background = script.read()
+                
+    except:
+        print("Couldn't read script, file not found. Please run program with script in the same directory")
+        return None
+
     try:
         auth = Auth(client_id, client_secret, redirect_uri)
         api = Api(auth)
@@ -110,12 +116,12 @@ if __name__ == '__main__':
         try:
             if sys.argv[1] == '--help':
                 print("Run the command as follows for the first time ->\npython3 ubuntu-login-screen.py <client_id> <client_secret> <redirect_uri>\nAfter first use, application will be added to autostart and keys will be cached.")
+                sys.exit()
+            
 
         except:
             pass
         
-        else:
-            sys.exit()
     
         if len(sys.argv)>3:
                 
