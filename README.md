@@ -15,4 +15,5 @@
 ```python3 ubuntu-login-screen.py <access key> <secret key> <redirect_uri>```
  If the execution is successful, the program will be added to startup and keys will be cached locally.
  
+ Note: Script has been tested only with ubuntu 21.10, but should work with 20.04, 21.04 and 21.10
  Enjoy!
